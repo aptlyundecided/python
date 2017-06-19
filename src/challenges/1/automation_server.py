@@ -1,18 +1,28 @@
-"""FUCK"""
-# import socketserver
+"""Challenge 1 Server"""
+
+
+# Dependencies
 import http.server
-# import urlparse
-# import json
 import subprocess
 
+
+# Create the HTTP Server
 HTTPSERVER = http.server.HTTPServer
+
+
+# Create a wicked sweet request handler class
 class SweetHandler(http.server.BaseHTTPRequestHandler):
     """My HTTP Request Handler"""
+
+
+    # set request headers
     def _set_headers(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
 
+
+    # set GET request handling
     def do_GET(self): #pylint: disable=C0103
         """Handle GET requests"""
         self._set_headers()
@@ -23,6 +33,8 @@ class SweetHandler(http.server.BaseHTTPRequestHandler):
             print(filename + 'Route not found')
             print('Route: ' + self.path)
 
+
+    # set POST request handling
     def do_POST(self): #pylint: disable=C0103
         """Handle POST requests"""
         self._set_headers()
@@ -33,16 +45,34 @@ class SweetHandler(http.server.BaseHTTPRequestHandler):
             print(filename + 'Route not found')
             print('Route: ' + self.path)
 
+
+    # call to header setting function, via expected do_HEAD method.
     def do_HEAD(self): #pylint: disable=C0103
         """Handle HEAD ... requests?"""
         self._set_headers()
 
+
 def run(server_class=HTTPSERVER, handler_class=SweetHandler, port=8000):
     """Run my HTTP Server"""
+
+
+    # set the local address of the server
     server_address = ('', port)
+
+
+    # here we are instantiating an object, prototyped as a handler class.
     httpd = server_class(server_address, handler_class)
-    print('Starting httpd...')
+
+
+    # show that server is attempting to run
+    print('Starting automation server...')
+
+
+    # tell server to run indefinitely
     httpd.serve_forever()
+
+    # Print to screen showing no error has occured starting server.
+    print('Automation Server is Running on port 8000')
 
 # Run the server.
 run()
