@@ -65,14 +65,12 @@ def run(server_class=HTTPSERVER, handler_class=SweetHandler, port=8000):
 
 
     # show that server is attempting to run
-    print('Starting automation server...')
+    print('Automation server running on port 8000')
 
 
     # tell server to run indefinitely
     httpd.serve_forever()
 
-    # Print to screen showing no error has occured starting server.
-    print('Automation Server is Running on port 8000')
 
 # Run the server.
 run()
