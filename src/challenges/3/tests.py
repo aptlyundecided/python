@@ -1,5 +1,4 @@
 """Unit tests with Python"""
-import pytest
 import datetime
 
 def what_day():
