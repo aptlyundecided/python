@@ -3,7 +3,7 @@
 class Sensor(object):
     """Create a type of sensor simulator"""
 
-    # Create based on class name:
+    # Factory takes a string input, and determines what class to return.
     def factory(sensor_type):
         """Create a specific sensor type"""
         if sensor_type == 'rh':
