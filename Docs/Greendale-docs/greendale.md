@@ -1,8 +1,8 @@
 # Greendale Project
 
-I am going to create a 'back end' for the most nerdy thing I've ever done in my life.
+A text based decision game that will initially work in the browser.  Then using JS, we'll push it into a 
 
-Using Python 3.6, I want to build a **Greendale Community College Simulator**.  
+Using Python 3.6, I want to build a **Greendale Community College** text adventure decision game.  
 
 ### What?
 Greendale is a community college from the 'cancelled, then un-cancelled, then cancelled, then wait it's back again, now maybe there will be a movie about it' TV show called __Community__.  This is one of my favorite shows (not season 6), and it's got everything I need to implement design patterns.

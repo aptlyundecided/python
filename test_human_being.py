@@ -1,5 +1,6 @@
-"""a test"""
+"""Test the Greendale Human Being prototype"""
 
+# Importing is nice.
 import human_being as human_being
 
 

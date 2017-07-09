@@ -12,8 +12,10 @@ class HumanBeing():
         self.l_name = l_name
         self.major = ''
         self.years_at_greendale = 0
-        self.is_graduated = False
+        self.location = ''
 
     def get_full_name(self):
+        """
+        return f_name and l_name of human being instance, with a space between.
+        """
         return self.f_name + ' ' + self.l_name
-
