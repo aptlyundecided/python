@@ -1,5 +1,5 @@
 """
-Let's learn about the singleton
+The Dean singleton || should be based on 'human being' singleton
 """
 
 # think of an item, of which there is ever only one at a time.
