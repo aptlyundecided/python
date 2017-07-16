@@ -1,4 +1,5 @@
 /archive
+/src
 __pycache__
 /greendale/__pycache__
 /greendale/tests/__pycache__
