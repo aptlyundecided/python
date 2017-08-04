@@ -25,20 +25,20 @@ FILTERED_CARS.sort_values(by=('MPG'), inplace=True, ascending=False)
 #
 sns.set(style='ticks')
 
-# Create integer version of MPG and Cylinder
+# Create integer version of MPG
 FILTERED_CARS['mpg_int'] = FILTERED_CARS['MPG'].astype(int)
 FILTERED_CARS['cylinders_int'] = FILTERED_CARS['Cylinders'].astype(int)
 
-# Drop duplicates
+# Dedupe
 FILTERED_CARS = FILTERED_CARS.drop_duplicates('Car')
 
-# Create the graph
-AX = sns.pointplot(y='cylinders_int', x='mpg_int', data=FILTERED_CARS, palette='muted')
+# Create graph
+AX = sns.pointplot(y='mpg_int', x='Weight', data=FILTERED_CARS, palette='muted')
 
-# Do labeling
-AX.set_ylabel('Number of Cylinders')
-AX.set_xlabel('MPG per Car')
-AX.set_title('MPG vs. Number of Cylinders')
+# Set labeling
+AX.set_xlabel('Weight of each car')
+AX.set_ylabel('MPG per Car')
+AX.set_title('MPG vs. Weight')
 
 
 # Show the graph

@@ -30,7 +30,9 @@ FILTERED_CARS['mpg_int'] = FILTERED_CARS['MPG'].astype(int)
 FILTERED_CARS['cylinders_int'] = FILTERED_CARS['Cylinders'].astype(int)
 FC = FILTERED_CARS['Horsepower'].astype(float)
 FX = FC.astype(int)
-
+# [!]
+# Not fully function code below here :-(
+# [!]
 FX.sort_values(axis=0, inplace=True)
 
 print(FX)
