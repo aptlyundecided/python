@@ -43,8 +43,8 @@ FILTERED_CARS = FILTERED_CARS.drop_duplicates('Car')
 
 AX = sns.pointplot(y='mpg_int', x='horsepower_int', data=FILTERED_CARS, palette='muted')
 
-AX.set_xlabel('MPG')
-AX.set_ylabel('Horsepower')
+AX.set_xlabel('Horsepower')
+AX.set_ylabel('MPG')
 AX.set_title('MPG vs. Horsepower')
 
 # print(FILTERED_CARS['horsepower_int'])
