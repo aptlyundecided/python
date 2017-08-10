@@ -9,6 +9,7 @@ class BaseAnt():
         self.species = 'Ant'
         self.taxonomic_class = 'Insect'
         self.role = 'not assigned'
+        self.hp = 150
 
     def show_role(self):
         """Print role to screen."""
@@ -23,6 +24,9 @@ class Queen(BaseAnt):
 
         # Assign role 'title'
         self.role = 'Queen'
+
+        #
+        self.hp += 1400
 
 # Worker ant properties
 class Worker(BaseAnt):
@@ -44,12 +48,16 @@ class Soldier(BaseAnt):
         # assign role
         self.role = 'Soldier'
 
+        # modify hp
+        self.hp += 400
+
 # Drone ant properties
 class Drone(BaseAnt):
     """A Drone of the ant colony."""
     def __init__(self):
         BaseAnt.__init__(self)
         self.role = 'Drone'
+        self.hp -= 50
 
 # 'Alate' ant properties
 class Alate(BaseAnt):
@@ -58,6 +66,7 @@ class Alate(BaseAnt):
         BaseAnt.__init__(self)
         self.role = 'Alate'
         self.sex = sex
+        self.hp += 50
 
     def is_male(self):
         """Make the Alate be a male."""
